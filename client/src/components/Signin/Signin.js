@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 import 'whatwg-fetch';
 import { getFromStorage, setInStorage } from '../utils/storage';
+import Dashboard from '../Dashboard/Dashboard';
 
 class Signin extends Component {
 	constructor(props) {
@@ -11,7 +13,8 @@ class Signin extends Component {
 			token: '',
 			signInError: '',
 			signInEmail: '',
-			signInPassword: ''
+			signInPassword: '',
+			redirect: true
         };
 
 		/* Binding the values entered in the Sign In text boxes functions to the constructor */
@@ -186,15 +189,10 @@ class Signin extends Component {
 			);
 		}
 		return (
-			<div>
-				<h1>Account</h1>
-				<button
-					onClick={this.onLogOut}>
-					Log Out!
-					</button>
-			</div>
+			<Redirect to='/dashboard' component={Dashboard} />
 		);
 	}
+
 }
 
 export default Signin;
