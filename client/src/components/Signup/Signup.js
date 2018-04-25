@@ -4,7 +4,7 @@ import { getFromStorage, setInStorage } from '../utils/storage';
 class Signup extends Component {
 	constructor(props) {
 		super(props);
-		// Set State
+		/* Set State */
         this.state = {
             isLoading: true,
 			token: '',
@@ -56,7 +56,7 @@ class Signup extends Component {
 		}
 	}
 
-	/* State Changes */
+	/* State Changes to handle click events */
 	onTextboxChangeSignUpEmail(event) {
 		this.setState({
 			signUpEmail: event.target.value
@@ -145,7 +145,7 @@ class Signup extends Component {
 		const obj = getFromStorage('papayas_app');
 		if (obj && obj.token) {
 			const { token } = obj;
-			// Verify token
+			/* Verify token */
 			fetch('/api/account/logout?token=' + token)
 				.then(res => res.json())
 				.then(json => {
@@ -166,13 +166,13 @@ class Signup extends Component {
 			});
 		}
 	}
-	// End all of functions
+	/* End all of functions */
 
 	render() {
 		const {
 			isLoading,
 			token,
-			// Sign Up Variables
+			/* Sign Up Variables */
 			signUpError,
 			signUpEmail,
 			signUpPassword,
@@ -181,12 +181,12 @@ class Signup extends Component {
 			signUpCrutchWords
 		} = this.state;
 
-		// If all of the above const have values then render a view that includes the following
+		/* If all of the above const have values then render a view that includes the following */
 		if (isLoading) {
 			return (<div><p>Page is Loading... </p></div>);
 		}
 
-		// If the page has finished loading but there is no token when we look for it in getFromStorage, then render these elements
+		/* If the page has finished loading but there is no token when we look for it in getFromStorage, then render these elements */
 		if (!token) {
 			return (
 				<div>

@@ -4,8 +4,8 @@ import { getFromStorage, setInStorage } from '../utils/storage';
 
 class Signin extends Component {
 	constructor(props) {
-        super(props);
-
+		super(props);
+		/* Set State */
         this.state = {
             isLoading: true,
 			token: '',
@@ -106,6 +106,7 @@ class Signin extends Component {
 				}
 			});
 	}
+
 	/* Logout Function */
 	onLogOut() {
 		this.setState({
@@ -161,7 +162,6 @@ class Signin extends Component {
 							<p>{signInError}</p>
 						) : (null)
 					}
-
 					<h1>Sign In!</h1>
 					<input
 						type="email"
@@ -177,19 +177,21 @@ class Signin extends Component {
 						onChange={this.onTextboxChangeSignInPassword}
 					/>
 					<br />
+					<br />
 					<button
 						onClick={this.onSignIn}>
 						Sign In</button>
 					</div>
-					<br />
-					<br />
 				</div>
 			);
 		}
 		return (
 			<div>
 				<h1>Account</h1>
-				<button onClick={this.onLogOut}>Log Out!</button>
+				<button
+					onClick={this.onLogOut}>
+					Log Out!
+					</button>
 			</div>
 		);
 	}
