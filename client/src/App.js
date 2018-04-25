@@ -5,6 +5,8 @@ import Container from './components/Container/Container';
 import Signup from './components/Signup/Signup';
 import Signin from './components/Signin/Signin';
 import Logout from './components/Logout/Logout';
+import Dashboard from './components/Dashboard/Dashboard';
+import UserProfile from './components/UserProfile/UserProfile';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component {
   render() {
@@ -13,11 +15,11 @@ class App extends Component {
 			  <div>
 				  <Header />
 				  <Container>
-					  <Route exact path='/' component={Signup} />
-					  <Route exact path='/signin'
-						  render={(props) => <Signin {...props} />} />
-					  <Route exact path='/logout'
-						  render={(props) => <Logout {...props}/>} />
+					  <Route exact path='/signup' component={Signup} />
+					  <Route exact path='/signin' component={Signin} />
+					  <Route exact path='/user' component={UserProfile} />
+					  <Route exact path='/dashboard' component={Dashboard} />
+					  <Route exact path='/logout' component={Logout} />
 				  </Container>
 				  <Footer />
 			  </div>
