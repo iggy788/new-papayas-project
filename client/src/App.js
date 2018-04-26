@@ -7,6 +7,7 @@ import Signin from './components/Signin/Signin';
 import Logout from './components/Logout/Logout';
 import Dashboard from './components/Dashboard/Dashboard';
 import UserProfile from './components/UserProfile/UserProfile';
+import TranscribeAudio from './components/TranscribeAudio/TranscribeAudio';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
 					  <Route exact path='/user' component={UserProfile} />
 					  <Route exact path='/dashboard' component={Dashboard} />
 					  <Route exact path='/logout' component={Logout} />
+					  <Route exact path='/transcribe' component={TranscribeAudio} />
 				  </Container>
 				  <Footer />
 			  </div>

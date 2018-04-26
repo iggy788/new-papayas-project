@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import 'whatwg-fetch';
 import { getFromStorage } from '../utils/storage';
+import Signin from '../Signin/Signin';
 class Signup extends Component {
 	constructor(props) {
 		super(props);
@@ -242,13 +244,7 @@ class Signup extends Component {
 			);
 		}
 		return (
-			<div>
-				<h1>Account!</h1>
-				<button
-					onClick={this.onLogOut}>
-					Log Out!
-					</button>
-			</div>
+			<Redirect to='/signin' component={Signin} />
 		);
 	}
 }

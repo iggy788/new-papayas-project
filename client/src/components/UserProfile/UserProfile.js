@@ -12,137 +12,129 @@ class UserProfile extends Component {
 	render() {
 		return (
 			<div className='wrapper'>
-			<Sidebar {...this.props} />
-			<div className="content">
+				<Sidebar {...this.props} />
+			<div id='main-panel' className='main-panel'>
 			<Grid fluid>
 					<Row>
 						<Col md={8}>
-							<Card title="Edit Profile" content={
+							<Card title='Edit Profile' content={
                                     <form>
                                         <FormInputs
-                                            ncols = {["col-md-5" , "col-md-3" , "col-md-4"]}
+                                            ncols = {['col-md-6' , 'col-md-6' , ]}
                                             proprieties = {[
                                                 {
-                                                 label : "Company (disabled)",
-                                                 type : "text",
-                                                 bsClass : "form-control",
-                                                 placeholder : "Company",
-                                                 defaultValue : "Creative Code Inc.",
-                                                 disabled : true
+                                                 label : 'Username',
+                                                 type : 'text',
+                                                 bsClass : 'form-control',
+                                                 placeholder : 'Username',
+                                                 defaultValue : 'mike1'
                                                 },
                                                 {
-                                                 label : "Username",
-                                                 type : "text",
-                                                 bsClass : "form-control",
-                                                 placeholder : "Username",
-                                                 defaultValue : "michael23"
-                                                },
-                                                {
-                                                 label : "Email address",
-                                                 type : "email",
-                                                 bsClass : "form-control",
-                                                 placeholder : "Email"
+                                                 label : 'Email address',
+                                                 type : 'email',
+                                                 bsClass : 'form-control',
+                                                 placeholder : 'mike1@mike1.com'
                                                 }
                                             ]}
                                         />
                                         <FormInputs
-                                            ncols = {["col-md-6" , "col-md-6"]}
+                                            ncols = {['col-md-6' , 'col-md-6']}
                                             proprieties = {[
                                                 {
-                                                 label : "First name",
-                                                 type : "text",
-                                                 bsClass : "form-control",
-                                                 placeholder : "First name",
-                                                 defaultValue : "Mike"
+                                                 label : 'First name',
+                                                 type : 'text',
+                                                 bsClass : 'form-control',
+                                                 placeholder : 'First name',
+                                                 defaultValue : 'Mike'
                                                 },
                                                 {
-                                                 label : "Last name",
-                                                 type : "text",
-                                                 bsClass : "form-control",
-                                                 placeholder : "Last name",
-                                                 defaultValue : "Andrew"
+                                                 label : 'Last name',
+                                                 type : 'text',
+                                                 bsClass : 'form-control',
+                                                 placeholder : 'Last name',
+                                                 defaultValue : 'Ignaczak'
                                                 }
                                             ]}
                                         />
                                         <FormInputs
-                                            ncols = {["col-md-12"]}
+                                            ncols = {['col-md-12']}
                                             proprieties = {[
                                                 {
-                                                    label : "Adress",
-                                                    type : "text",
-                                                    bsClass : "form-control",
-                                                    placeholder : "Home Adress",
-                                                    defaultValue : "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                                                    label : 'Address',
+                                                    type : 'text',
+                                                    bsClass : 'form-control',
+                                                    placeholder : 'Home Adress',
                                                 }
                                             ]}
                                         />
                                         <FormInputs
-                                            ncols = {["col-md-4","col-md-4","col-md-4"]}
+                                            ncols = {['col-md-4','col-md-4','col-md-4']}
                                             proprieties = {[
                                                 {
-                                                    label : "City",
-                                                    type : "text",
-                                                    bsClass : "form-control",
-                                                    placeholder : "City",
-                                                    defaultValue : "Mike"
+                                                    label : 'City',
+                                                    type : 'text',
+                                                    bsClass : 'form-control',
+                                                    placeholder : 'City',
                                                 },
                                                 {
-                                                    label : "Country",
-                                                    type : "text",
-                                                    bsClass : "form-control",
-                                                    placeholder : "Country",
-                                                    defaultValue : "Andrew"
+                                                    label : 'Country',
+                                                    type : 'text',
+                                                    bsClass : 'form-control',
+                                                    placeholder : 'Country',
+                                                    defaultValue : 'United States'
                                                 },
                                                 {
-                                                    label : "Postal Code",
-                                                    type : "number",
-                                                    bsClass : "form-control",
-                                                    placeholder : "ZIP Code"
+                                                    label : 'Postal Code',
+                                                    type : 'number',
+                                                    bsClass : 'form-control',
+                                                    placeholder : 'ZIP Code'
                                                 }
                                             ]}
                                         />
 
                                         <Row>
                                             <Col md={12}>
-                                                <FormGroup controlId="formControlsTextarea">
-                                                    <ControlLabel>About Me</ControlLabel>
-                                                    <FormControl rows="5" componentClass="textarea" bsClass="form-control" placeholder="Here can be your description" defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."/>
+                                                <FormGroup controlId='formControlsTextarea'>
+                                                    <ControlLabel>Enter Your Crutch Words Here</ControlLabel>
+                                                    <FormControl rows='5' componentClass='textarea' bsClass='form-control' placeholder='Please seperate each word by a semi colon (ex: word; word; word)'/>
                                                 </FormGroup>
                                             </Col>
                                         </Row>
                                         <Button
-                                            bsStyle="info"
+                                            bsStyle='info'
                                             pullRight
                                             fill
-                                            type="submit"
+                                            type='submit'
                                         >
                                             Update Profile
                                         </Button>
-                                        <div className="clearfix"></div>
+                                        <div className='clearfix'></div>
                                     </form>
                                 }
                             />
                         </Col>
                         <Col md={4}>
                             <UserCard
-                                bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
+                                bgImage='https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400'
                                 avatar={avatar}
-                                name="Mike Andrew"
-                                userName="michael24"
+                                name='Mike Ignaczak'
+                                userName='mike1'
                                 description={
                                     <span>
-                                        "Lamborghini Mercy
+                                        'Like'
                                         <br />
-                                        Your chick she so thirsty
+                                        'Um'
                                         <br />
-                                        I'm in that two seat Lambo"
+										'Essentially'
+										<br />
+										'So'
                                     </span>
                                 }
                                 socials={
                                     <div>
-                                        <Button simple><i className="fa fa-facebook-square"></i></Button>
-                                        <Button simple><i className="fa fa-twitter"></i></Button>
-                                        <Button simple><i className="fa fa-google-plus-square"></i></Button>
+                                        <Button simple><i className='fa fa-facebook-square'></i></Button>
+                                        <Button simple><i className='fa fa-twitter'></i></Button>
+                                        <Button simple><i className='fa fa-google-plus-square'></i></Button>
                                     </div>
                                 }
                             />

@@ -57,7 +57,7 @@ class Dashboard extends Component {
 										statsText='Errors'
 										statsValue='23'
 										statsIcon={<i className='fa fa-clock-o'></i>}
-										statsIconText='Last Transcribed Audio FIle'
+										statsIconText='Last Transcribed Audio File'
 									/>
 								</Col>
 								<Col lg={3} sm={6}>
